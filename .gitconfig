@@ -81,9 +81,21 @@
 [diff]
     renames = copies
     mnemonicprefix = true
+    #sets Beyond Compare as your diff tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
+	tool = bc3
 
 [difftool]
     prompt = false
+    #sets Beyond Compare as your diff tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
+	bc3 = trustExitCode
+
+[merge]
+    #sets Beyond Compare as your merge tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
+	tool = bc3
+
+[mergetool]
+    #sets Beyond Compare as your merge tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
+	bc3 = trustExitCode
 
 [help]
     autocorrect = 1
@@ -99,3 +111,15 @@
 
 [rerere]
     enabled = true
+
+[commit]
+	template = ~/.gitmessage.txt
+
+[filter "media"]
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
+
+[filter "lfs"]
+    clean = git lfs clean %f
+    smudge = git lfs smudge %f
+    required = true
