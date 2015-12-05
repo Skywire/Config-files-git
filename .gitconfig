@@ -49,6 +49,9 @@
     # http://stackoverflow.com/a/10693888/11543
     branch-by-date = for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short) %(committerdate:short) %(authorname)'
 
+    # http://stackoverflow.com/a/2514279
+    branch-by-dates = for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort -r
+
 [apply]
     whitespace = warn
 
@@ -82,20 +85,20 @@
 [diff]
     renames = copies
     mnemonicprefix = true
-    #sets Beyond Compare as your diff tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
+    # set Beyond Compare as your diff tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
 	tool = bc3
 
 [difftool]
     prompt = false
-    #sets Beyond Compare as your diff tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
+    # set Beyond Compare as your diff tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
 	bc3 = trustExitCode
 
 [merge]
-    #sets Beyond Compare as your merge tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
+    # set Beyond Compare as your merge tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
 	tool = bc3
 
 [mergetool]
-    #sets Beyond Compare as your merge tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
+    # set Beyond Compare as your merge tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
 	bc3 = trustExitCode
 
 [help]
