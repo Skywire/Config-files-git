@@ -117,7 +117,7 @@
     enabled = true
 
 [commit]
-	template = ~/.gitmessage.txt
+	template = ~/.git-commit-template
 
 [filter "media"]
     clean = git-media-clean %f
