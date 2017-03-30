@@ -86,20 +86,20 @@
     renames = copies
     mnemonicprefix = true
     # set Beyond Compare as your diff tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
-	tool = bc3
+	tool = bcompare
 
 [difftool]
     prompt = false
     # set Beyond Compare as your diff tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
-	bc3 = trustExitCode
+	bcompare = trustExitCode
 
 [merge]
     # set Beyond Compare as your merge tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
-	tool = bc3
+	tool = bcompare
 
 [mergetool]
     # set Beyond Compare as your merge tool: http://www.scootersoftware.com/support.php?zz=kb_vcs
-	bc3 = trustExitCode
+	bcompare = trustExitCode
 
 [help]
     autocorrect = 1
