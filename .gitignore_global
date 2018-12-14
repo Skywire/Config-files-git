@@ -30,6 +30,7 @@
 #####################
 .idea/*
 .phpstorm.meta.php
+.vscode/*
 
 # Node dependencies/tasks #
 ###########################
